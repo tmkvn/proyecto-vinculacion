@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import JuegoRestas from "../games/JuegoRestas";
-import JuegoDescifraElNumero from "../games/JuegoDescifraElNumero";
+import JuegoDescifraElNumero from "../games/descifra-el-numero/JuegoDescifraElNumero";
 
 const GamePage = () => {
   const { gameId } = useParams();

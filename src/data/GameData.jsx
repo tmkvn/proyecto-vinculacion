@@ -11,6 +11,12 @@ export const games = [
     icon: "➖",
     href: "game/restas",
   },
+  {
+    id: "reconocimiento-unidades",
+    title: "Reconocimiento de Unidades",
+    icon: "🔢",
+    href: "game/reconocimiento-unidades",
+  },
 ];
 
 export const mascots = ["🐱", "🐧", "🐷", "🦖", "🐑", "🐼", "🐮", "🐸"];

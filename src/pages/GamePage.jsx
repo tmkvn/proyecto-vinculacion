@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import JuegoRestas from "../games/JuegoRestas";
+import ReconocimientoUnidades from "../games/unidades/ReconocimientoUnidades";
 
 const GamePage = () => {
   const { gameId } = useParams();
@@ -9,6 +10,8 @@ const GamePage = () => {
     switch (gameId) {
       case "restas":
         return <JuegoRestas />;
+      case "reconocimiento-unidades":
+        return <ReconocimientoUnidades />;
       default:
         return (
           <div className="flex flex-col items-center justify-center min-h-[60vh]">

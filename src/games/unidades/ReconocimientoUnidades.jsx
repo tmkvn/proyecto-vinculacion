@@ -6,7 +6,8 @@ import "./ReconocimientoUnidades.css";
 function Unidades() {
     const [mostrarSegundoFormulario, setMostrarSegundoFormulario] =
       useState(false);
-    const [numeroActual, setNumeroActual] = useState(0);
+
+    const [numeroActual, setNumeroActual]= useState(0);
     const [respuestas, setRespuestas] = useState([]);
     const [rondaActual, setRondaActual] = useState(1);
     const [puntuacion, setPuntuacion] = useState(0);

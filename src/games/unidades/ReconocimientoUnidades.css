@@ -31,6 +31,7 @@
     justify-content: flex-start; /* Alineamos hacia arriba */
     align-items: center;
     /* Color*/
+   /* background-color: #F6C794;*/
     background-color: #F6C794;
     border-right: 2px solid #F6C794;
     z-index: 1;

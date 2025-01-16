@@ -1,319 +1,362 @@
-/* Importación de la fuente */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap'); /* Fuente amigable para niños */
-
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  background-color: #f9f9f9;
-}
-
-/* Estilo general del contenedor */
+/* Estilos base */
 .contenedor {
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* Estilo del panel izquierdo */
-.panel-izquierdo {
-  width: 25%;
-  background-color: #ff9643;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Contenedor del segundo formulario */
-.contenedor-segundo-formulario {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-}
-
-/* Panel izquierdo del segundo formulario */
-.panel-izquierdo-segundo {
-  width: 75%;
-  background-color: #ffc871;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-/* Panel derecho del segundo formulario */
-.panel-derecho-segundo {
-  width: 25%;
-  background-color: #ff9643;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  color: white;
-  box-sizing: border-box;
-}
-
-/* Estilo del panel derecho que tiene numeros */
-.panel-derecho {
-  width: 75%;
-  background-color: #ffc871;
-  color: white;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 50px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-/* Estilo de las columnas */
-.columna {
-  text-align: center;
-}
-
-.columna h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.columna ul {
-  list-style-type: none;
-  padding: 0;
-  font-size: 28px;
-  line-height: 2;
-}
-
-.columna ul li {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.columna ul li:hover {
-  color: #ff9643;
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-/* Estilo de la imagen del loro */
-.loro {
-  width: 200px;
-  margin-top: 30px;
-  transition: transform 0.3s ease-in-out; /* Efecto al pasar el ratón */
-}
-
-.loro:hover {
-  transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el ratón */
-}
-
-/* Botón de inicio */
-.boton-iniciar {
-  background-color: #f7e78f;
-  color: #ff9643;
-  border: 2px solid #ffc871;
-  padding: 14px 30px;
-  font-size: 18px;
-  font-weight: 600;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-top: 30px;
-  transition: all 0.3s ease;
-  display: block;
-  margin: 30px auto 0 auto;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.boton-iniciar:hover {
-  background-color: #ff9643;
-  color: white;
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.boton-iniciar:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(255, 150, 69, 0.4);
-}
-
-.boton-iniciar:active {
-  transform: translateY(2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Bloques de números */
-.bloques {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-  justify-content: center;
-}
-
-.bloque {
-  width: 40px;
-  height: 40px;
-  background-color: #ffd700;
-  border: 2px solid #ff9643;
-  border-radius: 4px;
-  transition: background-color 0.3s ease; /* Efecto de cambio de color */
-}
-
-.bloque:hover {
-  background-color: #ff9643;
-  cursor: pointer; /* Apunta al bloque */
-}
-
-/* Botones de respuesta */
-.opciones {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.boton-respuesta {
-  background-color: #2196f3;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 18px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.boton-respuesta:hover {
-  background-color: #1976d2;
-  transform: scale(1.05);
-}
-
-.boton-respuesta:active {
-  transform: scale(0.95);
-}
-
-/* Nuevos estilos para hacerlo más interactivo para los niños */
-
-/* Botones grandes y redondeados */
-.boton-grande {
-  background-color: #ff9643; /* Color brillante */
-  color: white;
-  padding: 15px 30px;
-  font-size: 24px;
-  font-weight: bold;
-  border-radius: 25px;
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
-  border: none;
-  margin: 20px;
-}
-
-.boton-grande:hover {
-  background-color: #ff5722; /* Color más oscuro */
-  transform: scale(1.1); /* Agranda el botón al pasar el ratón */
-}
-
-.boton-grande:active {
-  transform: scale(0.9); /* Reduce el tamaño al hacer clic */
-}
-
-/* Añadiendo un toque más juguetón a los títulos */
-h1, h2 {
-  font-family: 'Bubblegum Sans', cursive, sans-serif;
-  font-size: 36px;
-  color: whitesmoke;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo para los bloques de interacción (ajustado para niños) */
-.bloques-interactivos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.bloque-interactivo {
-  width: 50px;
-  height: 50px;
-  background-color: #ffeb3b; /* Color amarillo brillante */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  font-weight: bold;
-  color: #ff9643;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.bloque-interactivo:hover {
-  background-color: #ff9800; /* Naranja brillante */
-  transform: scale(1.1); /* Aumenta el tamaño */
-}
-
-.bloque-interactivo:active {
-  transform: scale(0.95); /* Reduce el tamaño al presionar */
-}
-
-/* Estilo general para el mensaje final */
-.mensaje-final {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ffeb3b; /* Amarillo brillante */
-  color: white; /* Texto blanco */
-  font-family: 'Bubblegum Sans', cursive, sans-serif;
-  padding: 20px 40px;
-  font-size: 24px;
-  text-align: center;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  opacity: 0;
-  animation: aparecer 1s forwards;
-  max-width: 80%;
-  width: auto;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra negra para resaltar el texto */
-}
-
-/* Animación para que el mensaje aparezca con un "salto" */
-@keyframes aparecer {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.8);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #F6C794;
+    position: relative; /* Aseguramos que los elementos hijos no estén bloqueados */
+    pointer-events: auto; /* Habilitar interacciones */
+    z-index: 0;
+    background: linear-gradient(90deg,  #155E95, #6A80B9);
+    animation: backgroundMove 6s infinite alternate;
   }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+  
+  /* Panel principal */
+  .panel-izquierdo,
+  .panel-derecho,
+  .panel-izquierdo-segundo,
+  .panel-derecho-segundo {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
   }
-}
-
-/* Estilo para el botón de aceptar */
-.boton-aceptar {
-  background-color: #ff9643; /* Naranja brillante */
-  color: white;
-  border: none;
-  padding: 10px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-top: 20px;
-}
-
-.boton-aceptar:hover {
-  background-color: #ff5722; /* Color más oscuro */
-  transform: scale(1.1);
-}
-
-.boton-aceptar:active {
-  transform: scale(0.95);
-}
+  
+  /* Panel izquierdo */
+  .panel-izquierdo {
+    display: flex;
+    justify-content: flex-start; /* Alineamos hacia arriba */
+    align-items: center;
+    /* Color*/
+    background-color: #F6C794;
+    border-right: 2px solid #F6C794;
+    z-index: 1;
+    /**/
+    height: 100vh;
+    padding: 0; /* Aseguramos que no haya padding que afecte la altura */
+    position: relative; /* Necesario para posicionar los botones de forma absoluta */
+  }
+  
+  .panel-izquierdo h1 {
+    font-size: inherit; /* Sin cambiar tamaños */
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .panel-izquierdo h1:hover {
+    color: #ffcb05;
+  }
+  
+  .panel-izquierdo .loro {
+    animation: swing 1.5s infinite ease-in-out;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .panel-izquierdo .loro:hover {
+    transform: scale(1.1);
+  }
+  .boton-iniciar,
+  .boton-pantalla-completa {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s, background 0.3s ease;
+  }
+  
+  .boton-iniciar:hover,
+  .boton-pantalla-completa:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #4caf50, #56c275);
+  }
+  
+  .boton-pantalla-completa {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+  }
+  
+  h2 {
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Efecto visual cuando se pasa el ratón por encima */
+  h2:hover {
+    color: #007bff; /* Cambia el color al pasar el ratón */
+    transform: scale(1.1); /* Escala un poco el texto */
+  }
+  
+  /* Agregar un borde inferior para mayor enfoque */
+  h2:active {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 4px;
+  }
+  
+  /* Opcional: efectos al hacer clic para simular interactividad */
+  h2:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efecto de sombra */
+  }
+  
+  .boton-pantalla-completa:hover {
+    background: linear-gradient(135deg, #007bff, #339fff);
+  }
+  /* Bloques */
+  .bloques {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .fila-bloques {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  
+  .bloque {
+    width: 30px;
+    height: 30px;
+    background-color: #4caf50;
+    margin: 2px;
+    border-radius: 4px;
+  }
+  
+  /* Panel derecho */
+  .panel-derecho {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+  }
+  
+  .columna {
+    text-align: center;
+  }
+  
+  .columna h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .columna ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .columna li {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+  
+  /* Mensaje final */
+  .mensaje-final {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 10px;
+    z-index: 20; /* Asegurar que está por encima de todo */
+  }
+  
+  .mensaje-final p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .boton-aceptar,
+  .boton-reiniciar {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .boton-respuesta {
+    background-color: #c8e6c9; /* Verde pastel */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .boton-respuesta:hover {
+    background-color: #a5d6a7;
+    transform: scale(1.1);
+  }
+  
+  .boton-reiniciar {
+    background-color: #007bff;
+  }
+  
+  .botones-contenedor {
+    position: absolute;
+    top: 10px; /* Mueve los botones hacia la parte superior */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Media Queries para pantallas grandes */
+  @media (min-width: 1024px) {
+    .contenedor {
+      flex-direction: row;
+      padding: 40px;
+    }
+  
+    .panel-izquierdo h1 {
+      font-size: 2rem;
+    }
+  
+    .panel-izquierdo .loro {
+      width: 250px;
+    }
+  
+    .bloques {
+      margin-top: 30px;
+    }
+  
+    .bloque {
+      width: 30px;
+      height: 30px;
+      margin: 2px;
+      background-color: #ffecb3; /* Amarillo pastel */
+      border-radius: 5px;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+    .bloque:hover {
+      transform: scale(1.1);
+      background-color: #ffe082;
+    }
+  
+    .columna h2 {
+      font-size: 1.8rem;
+    }
+  
+    .columna li {
+      font-size: 1.5rem;
+    }
+  
+    .mensaje-final p {
+      font-size: 1.8rem;
+    }
+  
+    .boton-iniciar,
+    .boton-pantalla-completa,
+    .boton-aceptar,
+    .boton-reiniciar {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes swing {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes backgroundMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  /* Ajustes generales */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .contenedor-segundo-formulario {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .panel-izquierdo-segundo {
+    width: 70%;
+  }
+  
+  .panel-derecho-segundo {
+    text-align: center;
+    width: 30%;
+  }
+  
+  .panel-derecho-segundo .loro {
+    display: block;
+    margin: 0 auto 20px;
+    animation: pulse 2s infinite; /* Animación para más vida */
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  .panel-izquierdo-segundo .boton-pantalla-completa {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #dcedc8; /* Verde pastel */
+    transition: all 0.3s ease;
+  }
+  
+  .panel-izquierdo-segundo .boton-pantalla-completa:hover {
+    background-color: #c5e1a5;
+    transform: scale(1.1);
+  }
+  
+  /* Bloques de respuesta */
+  .bloques .fila-bloques {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+  }

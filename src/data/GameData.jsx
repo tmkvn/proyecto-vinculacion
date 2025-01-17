@@ -35,6 +35,12 @@ export const games = [
     icon: "🐍",
     href: "game/juego-serpiente",
   },
+  {
+    id: "grand-prix-matematico",
+    title: "Grand Prix Matematico",
+    icon: "🏎️",
+    href: "game/grand-prix-matematico",
+  },
 ];
 
 export const mascots = ["🐱", "🐧", "🐷", "🦖", "🐑", "🐼", "🐮", "🐸"];

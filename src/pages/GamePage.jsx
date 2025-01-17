@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import JuegoRestas from "../games/JuegoRestas";
+import JuegoDescifraElNumero from "../games/descifra-el-numero/JuegoDescifraElNumero";
 import ReconocimientoUnidades from "../games/unidades/ReconocimientoUnidades";
 import CazadorNumeros from "../games/cazadorNumeros/CazadoresNumeros";
 import JuegoSerpiente from "../games/snake/JuegoSerpiente";
@@ -12,6 +13,8 @@ const GamePage = () => {
     switch (gameId) {
       case "restas":
         return <JuegoRestas />;
+      case "descifra-el-numero":
+        return <JuegoDescifraElNumero />;
       case "reconocimiento-unidades":
         return <ReconocimientoUnidades />;
       case "cazador-numeros":

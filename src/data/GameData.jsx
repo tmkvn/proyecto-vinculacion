@@ -12,6 +12,12 @@ export const games = [
     href: "game/restas",
   },
   {
+    id: "descifra-el-numero",
+    title: "Descifra el Número",
+    icon: "🔑",
+    href: "game/descifra-el-numero",
+  },
+  {
     id: "reconocimiento-unidades",
     title: "Reconocimiento de Unidades",
     icon: "🔢",

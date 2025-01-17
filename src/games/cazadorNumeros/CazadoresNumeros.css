@@ -1,0 +1,85 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  overflow: hidden; /* Evitar scroll innecesario */
+}
+
+.contenedor {
+  display: flex;
+  height: 100vh;
+  flex-wrap: nowrap;
+}
+
+/* Panel izquierdo */
+.panel-izquierdo {
+  width: 25%;
+  background-color: #ff9643;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Panel derecho */
+.panel-derecho {
+  width: 75%;
+  background-color: #ffc871;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Botón para pantalla completa */
+.boton-pantalla-completa {
+  background-color: #ff9643;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-pantalla-completa:hover {
+  background-color: #ff5722;
+  transform: scale(1.1);
+}
+
+.boton-pantalla-completa:active {
+  transform: scale(0.95);
+}
+
+/* Estilos para pantalla completa */
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.panel-izquierdo.fullscreen,
+.panel-derecho.fullscreen {
+  padding: 0;
+}
+
+.panel-izquierdo.fullscreen {
+  width: 20%; /* Ajustar proporciones en pantalla completa */
+}
+
+.panel-derecho.fullscreen {
+  width: 80%;
+}

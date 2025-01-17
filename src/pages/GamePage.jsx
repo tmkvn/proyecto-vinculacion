@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import JuegoRestas from "../games/JuegoRestas";
 import ReconocimientoUnidades from "../games/unidades/ReconocimientoUnidades";
+import CazadorNumeros from "../games/cazadorNumeros/CazadoresNumeros";
 
 const GamePage = () => {
   const { gameId } = useParams();
@@ -12,6 +13,8 @@ const GamePage = () => {
         return <JuegoRestas />;
       case "reconocimiento-unidades":
         return <ReconocimientoUnidades />;
+      case "cazador-numeros":
+        return <CazadorNumeros />;
       default:
         return (
           <div className="flex flex-col items-center justify-center min-h-[60vh]">

@@ -17,6 +17,12 @@ export const games = [
     icon: "🔢",
     href: "game/reconocimiento-unidades",
   },
+  {
+    id: "cazador-numeros",
+    title: "Cazador de Números",
+    icon: "🎯",
+    href: "game/cazador-numeros",
+  }
 ];
 
 export const mascots = ["🐱", "🐧", "🐷", "🦖", "🐑", "🐼", "🐮", "🐸"];

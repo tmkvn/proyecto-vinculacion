@@ -1,18 +1,17 @@
 /* Importar la fuente desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-/* General Styles */
-body {
+.cn-body {
   font-family: 'Fredoka One', cursive;
   margin: 0;
   padding: 0;
-  background-color: #f3f4f6;
+  /* background-color: #f3f4f6; */
   color: #333;
   text-align: center;
 }
 
 /* Game Container */
-.game-container {
+.cn-game-container {
   max-width: 400px;
   margin: 40px auto;
   padding: 10px;
@@ -21,7 +20,7 @@ body {
   border-radius: 10px;
 }
 
-h1 {
+.cn-title {
   font-size: 2.5rem;
   color: #007bff;
   margin-bottom: 10px;
@@ -29,14 +28,18 @@ h1 {
   letter-spacing: 2px;
 }
 
-p {
+.cn-description,
+.cn-equation,
+.cn-score,
+.cn-round,
+.cn-message {
   font-size: 1.2rem;
   margin: 10px 0;
   color: #555;
 }
 
 /* Number Grid */
-.number-grid {
+.cn-number-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
@@ -44,7 +47,7 @@ p {
 }
 
 /* Number Button */
-.number-button {
+.cn-number-button {
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -55,18 +58,18 @@ p {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.number-button:hover {
+.cn-number-button:hover {
   background-color: #0056b3;
   transform: scale(1.1);
 }
 
-.number-button:active {
+.cn-number-button:active {
   background-color: #004085;
   transform: scale(1.05);
 }
 
 /* Game Over Message */
-.game-over-message {
+.cn-game-over-message {
   padding: 20px;
   background-color: #f8d7da;
   color: #721c24;
@@ -75,13 +78,13 @@ p {
   margin-top: 20px;
 }
 
-h2 {
+.cn-game-over-title {
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
 /* Restart Button */
-.restart-button {
+.cn-restart-button {
   background-color: #28a745;
   color: #fff;
   border: none;
@@ -92,12 +95,12 @@ h2 {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.restart-button:hover {
+.cn-restart-button:hover {
   background-color: #218838;
   transform: scale(1.1);
 }
 
-.restart-button:active {
+.cn-restart-button:active {
   background-color: #1e7e34;
   transform: scale(1.05);
 }

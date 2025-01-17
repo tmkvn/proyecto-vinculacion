@@ -65,38 +65,39 @@ const SumaYEncuentra = () => {
   };
 
   return (
-    <div className="game-container">
-      <h1>Suma y Encuentra</h1>
-      <p>Resuelve la suma y selecciona la respuesta correcta</p>
-      {!isGameOver ? (
-        <>
-          <p>
-            {problem.num1} + {problem.num2} = ?
-          </p>
-          <div className="number-grid">
-            {options.map((number, index) => (
-              <button
-                key={index}
-                className="number-button"
-                onClick={() => handleClick(number)}
-              >
-                {number}
-              </button>
-            ))}
+    <div className='cn-body'>
+      <div className="cn-game-container">
+        <h1 className="cn-title">Suma y Encuentra</h1>
+        <p className="cn-description">Resuelve la suma y selecciona la respuesta correcta</p>
+        {!isGameOver ? (
+          <>
+            <p className="cn-equation">
+              {problem.num1} + {problem.num2} = ?
+            </p>
+            <div className="cn-number-grid">
+              {options.map((number, index) => (
+                <button
+                  key={index}
+                  className="cn-number-button"
+                  onClick={() => handleClick(number)}
+                >
+                  {number}
+                </button>
+              ))}
+            </div>
+            <p className="cn-score">Puntaje: {score}</p>
+            <p className="cn-round">Ronda: {round} de 5</p>
+            <p className="cn-message">{message}</p>
+          </>
+        ) : (
+          <div className="cn-game-over-message">
+            <h2 className="cn-game-over-title">{message}</h2>
+            <button className="cn-restart-button" onClick={restartGame}>
+              Reiniciar Juego
+            </button>
           </div>
-          <p>Puntaje: {score}</p>
-          <p>Ronda: {round} de 5</p>
-          <p>{message}</p>
-        </>
-      ) : (
-        // Mostrar mensaje y botón de reinicio al terminar
-        <div className="game-over-message">
-          <h2>{message}</h2>
-          <button className="restart-button" onClick={restartGame}>
-            Reiniciar Juego
-          </button>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

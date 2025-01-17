@@ -118,7 +118,7 @@ function Unidades() {
         ) : (
           <div className="contenedor-segundo-formulario">
             <div className="panel-izquierdo-segundo">
-              <h2>Ronda {rondaActual} de 5</h2>
+              <h2 className="titulo-juego">Ronda {rondaActual} de 5</h2>
               {renderizarBloques()}
               <button
                 className="boton-pantalla-completa"
@@ -129,7 +129,7 @@ function Unidades() {
             </div>
             <div className="panel-derecho-segundo">
               <img src={parrotImage} alt="Loro" className="loro" />
-              <h2>Selecciona el número</h2>
+              <h2 className="titulo-juego">Selecciona el número</h2>
               <div className="opciones">
                 {respuestas.map((respuesta, index) => (
                   <button

@@ -97,52 +97,54 @@ const JuegoSerpienteMatematica = () => {
   };
 
   return (
-    <div className="contenedor-juego">
-      <button className="boton-pantalla-completa" onClick={activarPantallaCompleta}>
-        Pantalla Completa
-      </button>
-      {juegoTerminado ? (
-        <div className="juego-terminado">
-          <h1>Juego Terminado</h1>
-          <p className="mostrar-puntaje">Puntaje: {puntaje}</p>
-          <button className="boton-reiniciar" onClick={reiniciarJuego}>
-            Reiniciar
-          </button>
-        </div>
-      ) : (
-        <>
-          <div className="encabezado">
-            <h1>Juego de la Serpiente Matemática</h1>
-            <p className="mostrar-puntaje">
-              Puntaje: {puntaje} | Número a comer: <strong>{numeroCorrecto}</strong>
-            </p>
+    <div className='sn-body'>
+      <div className="contenedor-juego">
+        <button className="boton-pantalla-completa" onClick={activarPantallaCompleta}>
+          Pantalla Completa
+        </button>
+        {juegoTerminado ? (
+          <div className="juego-terminado">
+            <h1>Juego Terminado</h1>
+            <p className="mostrar-puntaje">Puntaje: {puntaje}</p>
+            <button className="boton-reiniciar" onClick={reiniciarJuego}>
+              Reiniciar
+            </button>
           </div>
-          <div className="cuadricula">
-            {Array.from({ length: TAMANO_GRID * TAMANO_GRID }).map((_, index) => {
-              const x = index % TAMANO_GRID;
-              const y = Math.floor(index / TAMANO_GRID);
+        ) : (
+          <>
+            <div className="encabezado">
+              <h1>Juego de la Serpiente Matemática</h1>
+              <p className="mostrar-puntaje">
+                Puntaje: {puntaje} | Número a comer: <strong>{numeroCorrecto}</strong>
+              </p>
+            </div>
+            <div className="cuadricula">
+              {Array.from({ length: TAMANO_GRID * TAMANO_GRID }).map((_, index) => {
+                const x = index % TAMANO_GRID;
+                const y = Math.floor(index / TAMANO_GRID);
 
-              const esSerpiente = serpiente.some(segmento => segmento.x === x && segmento.y === y);
-              const esCabeza = serpiente[0].x === x && serpiente[0].y === y;
-              const esComida = comida.x === x && comida.y === y;
-              const esComidaIncorrecta = comidaIncorrecta.x === x && comidaIncorrecta.y === y;
+                const esSerpiente = serpiente.some(segmento => segmento.x === x && segmento.y === y);
+                const esCabeza = serpiente[0].x === x && serpiente[0].y === y;
+                const esComida = comida.x === x && comida.y === y;
+                const esComidaIncorrecta = comidaIncorrecta.x === x && comidaIncorrecta.y === y;
 
-              return (
-                <div
-                  key={index}
-                  className={`celda 
-                    ${esSerpiente ? (esCabeza ? 'cabeza-serpiente' : 'cuerpo-serpiente') : ''} 
-                    ${esComida ? 'comida-correcta' : ''} 
-                    ${esComidaIncorrecta ? 'comida-incorrecta' : ''}`}
-                >
-                  {esComida && <span className="numero-correcto">{numeroCorrecto}</span>}
-                  {esComidaIncorrecta && numeroIncorrecto}
-                </div>
-              );
-            })}
-          </div>
-        </>
-      )}
+                return (
+                  <div
+                    key={index}
+                    className={`celda 
+                      ${esSerpiente ? (esCabeza ? 'cabeza-serpiente' : 'cuerpo-serpiente') : ''} 
+                      ${esComida ? 'comida-correcta' : ''} 
+                      ${esComidaIncorrecta ? 'comida-incorrecta' : ''}`}
+                  >
+                    {esComida && <span className="numero-correcto">{numeroCorrecto}</span>}
+                    {esComidaIncorrecta && numeroIncorrecto}
+                  </div>
+                );
+              })}
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 }

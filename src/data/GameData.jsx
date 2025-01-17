@@ -12,34 +12,34 @@ export const games = [
     href: "game/restas",
   },
   {
-    id: "descifra-el-numero",
-    title: "Descifra el Número",
-    icon: "🔑",
-    href: "game/descifra-el-numero",
-  },
-  {
     id: "reconocimiento-unidades",
     title: "Reconocimiento de Unidades",
     icon: "🔢",
     href: "game/reconocimiento-unidades",
   },
   {
+    id: "descifra-el-numero",
+    title: "Descifra el Número",
+    icon: "🔑",
+    href: "game/descifra-el-numero",
+  },
+  {
     id: "cazador-numeros",
     title: "Suma y Encuentra",
     icon: "🎯",
-    href: "game/ccazador-numeros",
-  },
-  {
-    id: "juego-serpiente",
-    title: "Juego Serpiente",
-    icon: "🐍",
-    href: "game/juego-serpiente",
+    href: "game/cazador-numeros",
   },
   {
     id: "grand-prix-matematico",
     title: "Grand Prix Matematico",
     icon: "🏎️",
     href: "game/grand-prix-matematico",
+  },
+  {
+    id: "juego-serpiente",
+    title: "Juego Serpiente",
+    icon: "🐍",
+    href: "game/juego-serpiente",
   },
 ];
 

@@ -122,7 +122,7 @@ const JuegoDescifraElNumero = () => {
     <DndProvider backend={HTML5Backend}>
       <div className="newContainer mx-auto p-4">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-4">El Tesoro del Número</h2>
+          <h2 className="text-3xl font-bold mb-4">Descomponer el número</h2>
           <p className="text-xl mb-2">Puntuación: {score}</p>
           <p className="text-2xl font-bold mb-4">Número: {currentNumber}</p>
         </div>

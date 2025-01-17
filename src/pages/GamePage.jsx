@@ -5,6 +5,7 @@ import JuegoDescifraElNumero from "../games/descifra-el-numero/JuegoDescifraElNu
 import ReconocimientoUnidades from "../games/unidades/ReconocimientoUnidades";
 import CazadorNumeros from "../games/cazadorNumeros/CazadoresNumeros";
 import JuegoSerpiente from "../games/snake/JuegoSerpiente";
+import JuegoSumas from "../games/juegoSumas/JuegoSumas";
 
 const GamePage = () => {
   const { gameId } = useParams();
@@ -21,6 +22,8 @@ const GamePage = () => {
         return <CazadorNumeros />;
       case "juego-serpiente":
         return <JuegoSerpiente />;
+      case "sumas":
+        return <JuegoSumas />;
       default:
         return (
           <div className="flex flex-col items-center justify-center min-h-[60vh]">

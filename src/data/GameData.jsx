@@ -29,13 +29,12 @@ export const games = [
     icon: "🎯",
     href: "game/ccazador-numeros",
   },
-  
   {
     id: "juego-serpiente",
     title: "Juego Serpiente",
     icon: "🐍",
     href: "game/juego-serpiente",
-  }
+  },
 ];
 
 export const mascots = ["🐱", "🐧", "🐷", "🦖", "🐑", "🐼", "🐮", "🐸"];

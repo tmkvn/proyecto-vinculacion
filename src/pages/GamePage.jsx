@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import JuegoRestas from "../games/JuegoRestas";
+import JuegoRestas from "../games/juegoRestas/JuegoRestas";
 import JuegoDescifraElNumero from "../games/descifra-el-numero/JuegoDescifraElNumero";
 import ReconocimientoUnidades from "../games/unidades/ReconocimientoUnidades";
 import CazadorNumeros from "../games/cazadorNumeros/CazadoresNumeros";

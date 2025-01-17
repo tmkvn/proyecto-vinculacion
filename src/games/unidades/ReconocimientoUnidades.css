@@ -1,0 +1,372 @@
+/* Estilos base */
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #F6C794;
+    position: relative; /* Aseguramos que los elementos hijos no estén bloqueados */
+    pointer-events: auto; /* Habilitar interacciones */
+    z-index: 0;
+    background: linear-gradient(90deg,  #155E95, #6A80B9);
+    animation: backgroundMove 6s infinite alternate;
+  }
+  
+  /* Panel principal */
+  .panel-izquierdo,
+  .panel-derecho,
+  .panel-izquierdo-segundo,
+  .panel-derecho-segundo {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Panel izquierdo */
+  .panel-izquierdo {
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido hacia la izquierda */
+    align-items: center; /* Centra verticalmente el contenido */
+    background-color: #F6C794;
+    border-right: 2px solid #F6C794;
+    height: 100vh;
+    padding: 0;
+    position: relative;
+    flex-direction: row; /* Aquí se asegura que los elementos estén en fila (horizontal) */
+  }
+  
+  .panel-izquierdo h1 {
+    font-size: inherit; /* Sin cambiar tamaños */
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .panel-izquierdo h1:hover {
+    color: #ffcb05;
+  }
+  
+  .panel-izquierdo .loro {
+    animation: swing 1.5s infinite ease-in-out;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-right: 20px;
+  }
+  .panel-izquierdo .loro:hover {
+    transform: scale(1.1);
+  }
+  .boton-iniciar {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.boton-iniciar:hover {
+    background: linear-gradient(135deg, #0056b3, #007bff); /* Invertir gradiente en hover. */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño. */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover. */
+}
+
+.boton-iniciar:active {
+    transform: scale(0.95); /* Efecto de presionado. */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más pequeña al presionar. */
+}
+
+.boton-iniciar:focus {
+    outline: none; /* Quita el borde predeterminado del navegador. */
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.8); /* Destaca el botón al enfocarse. */
+}
+  
+
+  .boton-pantalla-completa {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    position: fixed; /* Fijo en relación a la ventana del navegador. */
+    top: 90px; /* Separación desde el borde superior. */
+    right: 1000px; /* Separación desde el borde derecho. */
+  }
+  
+  h2 {
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Efecto visual cuando se pasa el ratón por encima */
+  h2:hover {
+    color: #007bff; /* Cambia el color al pasar el ratón */
+    transform: scale(1.1); /* Escala un poco el texto */
+  }
+  
+  /* Agregar un borde inferior para mayor enfoque */
+  h2:active {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 4px;
+  }
+  
+  /* Opcional: efectos al hacer clic para simular interactividad */
+  h2:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efecto de sombra */
+  }
+  
+  
+  /* Bloques */
+  .bloques {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .fila-bloques {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  
+  .bloque {
+    width: 30px;
+    height: 30px;
+    background-color: #4caf50;
+    margin: 2px;
+    border-radius: 4px;
+  }
+  
+  /* Panel derecho */
+  .panel-derecho {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+  }
+  
+  .columna {
+    text-align: center;
+  }
+  
+  .columna h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .columna ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .columna li {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+  
+  /* Mensaje final */
+  .mensaje-final {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 10px;
+    z-index: 20; /* Asegurar que está por encima de todo */
+  }
+  
+  .mensaje-final p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .boton-aceptar,
+  .boton-reiniciar {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .boton-respuesta {
+    background-color: #c8e6c9; /* Verde pastel */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .boton-respuesta:hover {
+    background-color: #a5d6a7;
+    transform: scale(1.1);
+  }
+  
+  .boton-reiniciar {
+    background-color: #007bff;
+  }
+  
+  .botones-contenedor {
+    position: absolute;
+    top: 10px; 
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+  
+  /* Media Queries para pantallas grandes */
+  @media (min-width: 1024px) {
+    .contenedor {
+      flex-direction: row;
+      padding: 40px;
+    }
+  
+    .panel-izquierdo h1 {
+      font-size: 2rem;
+    }
+  
+    .panel-izquierdo .loro {
+      width: 200px;
+    }
+  
+    .bloques {
+      margin-top: 30px;
+    }
+  
+    .bloque {
+      width: 30px;
+      height: 30px;
+      margin: 2px;
+      background-color: #ffecb3; /* Amarillo pastel */
+      border-radius: 5px;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+    .bloque:hover {
+      transform: scale(1.1);
+      background-color: #ffe082;
+    }
+  
+    .columna h2 {
+      font-size: 1.8rem;
+    }
+  
+    .columna li {
+      font-size: 1.5rem;
+    }
+  
+    .mensaje-final p {
+      font-size: 1.8rem;
+    }
+  
+    .boton-iniciar,
+    .boton-pantalla-completa,
+    .boton-aceptar,
+    .boton-reiniciar {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes swing {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes backgroundMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  /* Ajustes generales */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .contenedor-segundo-formulario {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .panel-izquierdo-segundo {
+    width: 70%;
+  }
+  
+  .panel-derecho-segundo {
+    text-align: center;
+    width: 30%;
+  }
+  
+  .panel-derecho-segundo .loro {
+    display: block;
+    margin: 0 auto 20px;
+    animation: pulse 2s infinite; /* Animación para más vida */
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  .panel-izquierdo-segundo .boton-pantalla-completa {
+    position: absolute;
+    bottom: 100;
+    right: 90px;
+    background-color: #dcedc8; /* Verde pastel */
+    transition: all 0.3s ease;
+   
+  }
+  
+  .panel-izquierdo-segundo .boton-pantalla-completa:hover {
+    background-color: #c5e1a5;
+    transform: scale(1.1);
+  }
+  
+  /* Bloques de respuesta */
+  .bloques .fila-bloques {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+  }

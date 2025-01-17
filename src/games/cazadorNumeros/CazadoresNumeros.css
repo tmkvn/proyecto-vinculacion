@@ -1,85 +1,103 @@
-/* Importación de fuentes */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+/* Importar la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+/* General Styles */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Fredoka One', cursive;
   margin: 0;
-  background-color: #f9f9f9;
-  overflow: hidden; /* Evitar scroll innecesario */
-}
-
-.contenedor {
-  display: flex;
-  height: 100vh;
-  flex-wrap: nowrap;
-}
-
-/* Panel izquierdo */
-.panel-izquierdo {
-  width: 25%;
-  background-color: #ff9643;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0;
+  background-color: #f3f4f6;
+  color: #333;
   text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
 }
 
-/* Panel derecho */
-.panel-derecho {
-  width: 75%;
-  background-color: #ffc871;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Game Container */
+.game-container {
+  max-width: 600px;
+  margin: 50px auto;
   padding: 20px;
-  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-/* Botón para pantalla completa */
-.boton-pantalla-completa {
-  background-color: #ff9643;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 12px 24px;
+h1 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Number Grid */
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+/* Number Button */
+.number-button {
+  background-color: #007bff;
+  color: #fff;
   border: none;
   border-radius: 10px;
+  padding: 15px;
+  font-size: 1.2rem;
   cursor: pointer;
-  margin: 20px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.boton-pantalla-completa:hover {
-  background-color: #ff5722;
+.number-button:hover {
+  background-color: #0056b3;
   transform: scale(1.1);
 }
 
-.boton-pantalla-completa:active {
-  transform: scale(0.95);
+.number-button:active {
+  background-color: #004085;
+  transform: scale(1.05);
 }
 
-/* Estilos para pantalla completa */
-.fullscreen {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-wrap: nowrap;
+/* Game Over Message */
+.game-over-message {
+  padding: 20px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
-.panel-izquierdo.fullscreen,
-.panel-derecho.fullscreen {
-  padding: 0;
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-.panel-izquierdo.fullscreen {
-  width: 20%; /* Ajustar proporciones en pantalla completa */
+/* Restart Button */
+.restart-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.panel-derecho.fullscreen {
-  width: 80%;
+.restart-button:hover {
+  background-color: #218838;
+  transform: scale(1.1);
+}
+
+.restart-button:active {
+  background-color: #1e7e34;
+  transform: scale(1.05);
 }

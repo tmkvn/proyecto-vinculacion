@@ -7,6 +7,8 @@ import CazadorNumeros from "../games/cazadorNumeros/CazadoresNumeros";
 import JuegoSerpiente from "../games/snake/JuegoSerpiente";
 import JuegoSumas from "../games/juegoSumas/JuegoSumas";
 import GrandPrixMatematico from "../games/grandPrixMatematico/GrandPrixMatematico";
+import CarrerasGame from "../games/carrerasMatematicas/Carreras";
+import ContarGame from "../games/contarSumar/contar";
 
 const GamePage = () => {
   const { gameId } = useParams();
@@ -27,6 +29,10 @@ const GamePage = () => {
         return <JuegoSumas />;
       case "grand-prix-matematico":
         return <GrandPrixMatematico />;
+      case "carreras-matematicas":
+        return <CarrerasGame />;
+      case "contar-sumar":
+          return <ContarGame />;
       default:
         return (
           <div className="flex flex-col items-center justify-center min-h-[60vh]">

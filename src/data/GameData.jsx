@@ -41,6 +41,18 @@ export const games = [
     icon: "🐍",
     href: "game/juego-serpiente",
   },
+  {
+    id: "carreras-matematicas",
+    title: "Carreras matematicas",
+    icon: "🏁",
+    href: "game/carreras-matematicas",
+  },
+  {
+    id: "contar-sumar",
+    title: "Contar y Sumar",
+    icon: "✏️",
+    href: "game/contar-sumar",
+  }
 ];
 
 export const mascots = ["🐱", "🐧", "🐷", "🦖", "🐑", "🐼", "🐮", "🐸"];

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import JuegoRestas from "../games/JuegoRestas";
 import ReconocimientoUnidades from "../games/unidades/ReconocimientoUnidades";
 import CazadorNumeros from "../games/cazadorNumeros/CazadoresNumeros";
+import JuegoSerpiente from "../games/snake/JuegoSerpiente";
 
 const GamePage = () => {
   const { gameId } = useParams();
@@ -15,6 +16,8 @@ const GamePage = () => {
         return <ReconocimientoUnidades />;
       case "cazador-numeros":
         return <CazadorNumeros />;
+      case "juego-serpiente":
+        return <JuegoSerpiente />;
       default:
         return (
           <div className="flex flex-col items-center justify-center min-h-[60vh]">

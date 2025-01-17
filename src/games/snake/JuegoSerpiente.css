@@ -1,0 +1,163 @@
+body {
+    font-family: 'Arial', sans-serif; /* Mantén tu fuente preferida */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Fondo del sitio */
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Contenedor del juego */
+  .contenedor-juego {
+    max-width: 600px; 
+    margin: 50px auto; 
+    padding: 20px; 
+    background-color: #ffffff; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+  }
+  
+  /* Encabezado con el título y el puntaje */
+  .encabezado {
+    font-size: 24px;
+    color: #2c3e50; /* Azul oscuro para mayor contraste */
+    margin-bottom: 10px;
+    text-align: center; /* Centra el texto */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    animation: aparecer 1.5s ease-in-out; /* Efecto de entrada */
+    }
+    .mostrar-puntaje {
+        font-size: 20px;
+        color: #16a085; /* Verde para destacar el puntaje */
+        font-weight: bold; /* Resalta el texto */
+        text-align: center; /* Centra el texto */
+        padding: 5px 10px; /* Espaciado interno */
+        background-color: #ecf0f1; /* Fondo claro para resaltar */
+        border-radius: 8px; /* Bordes redondeados */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+        transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    }
+    
+    .mostrar-puntaje:hover {
+        transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse */
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    }
+    
+    /* Animación de entrada */
+    @keyframes aparecer {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+  
+  /* Estilos para la cuadrícula */
+  .cuadricula {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* Cambia 10 por el número de columnas */
+    gap: 1px; /* Espacio entre celdas */
+    width: 100%; /* Ajusta el ancho */
+    max-width: 440px; /* Limita el tamaño */
+    margin: 0 auto;
+}
+.celda {
+    width: 90%;
+    aspect-ratio: 1 / 1; /* Hace que las celdas sean cuadradas */
+    background-color: #f0f0f0; /* Color de fondo */
+    border: 1px solid #ddd;
+}
+  
+  .celda span {
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Estilos específicos para la serpiente */
+  .cabeza-serpiente {
+    background-color: #00ff00;
+    border-radius: 50%;
+  }
+  
+  .cuerpo-serpiente {
+    background-color: #27ae60;
+  }
+  
+  /* Estilo para la comida correcta */
+  .comida-correcta {
+    background-color: #f1c40f;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+  }
+  
+  /* Estilo para la comida incorrecta */
+  .comida-incorrecta {
+    background-color: #e74c3c;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+  }
+  
+  /* Mensaje de fin de juego */
+  .juego-terminado {
+    text-align: center;
+  }
+  
+  .juego-terminado h1 {
+    font-size: 32px;
+    color: #ff0000;
+  }
+  
+  .mostrar-puntaje {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .boton-reiniciar {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+  }
+  
+  .boton-reiniciar:hover {
+    background: linear-gradient(135deg, #2ecc71, #4caf50);
+  }
+
+  .contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .boton-pantalla-completa {
+    position: absolute;
+    top: 136px;
+    right: 180px;
+    padding: 10px 8px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .boton-pantalla-completa:hover {
+    background-color: #0056b3;
+  }
+  

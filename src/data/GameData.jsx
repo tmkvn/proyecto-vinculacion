@@ -21,7 +21,14 @@ export const games = [
     id: "cazador-numeros",
     title: "Suma y Encuentra",
     icon: "🎯",
-    href: "game/cazador-numeros",
+    href: "game/ccazador-numeros",
+  },
+  
+  {
+    id: "juego-serpiente",
+    title: "Juego Serpiente",
+    icon: "🐍",
+    href: "game/juego-serpiente",
   }
 ];
 

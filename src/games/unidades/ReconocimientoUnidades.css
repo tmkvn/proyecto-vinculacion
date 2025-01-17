@@ -28,17 +28,14 @@
   /* Panel izquierdo */
   .panel-izquierdo {
     display: flex;
-    justify-content: flex-start; /* Alineamos hacia arriba */
-    align-items: center;
-    /* Color*/
-   /* background-color: #F6C794;*/
+    justify-content: flex-start; /* Alinea el contenido hacia la izquierda */
+    align-items: center; /* Centra verticalmente el contenido */
     background-color: #F6C794;
     border-right: 2px solid #F6C794;
-    z-index: 1;
-    /**/
     height: 100vh;
-    padding: 0; /* Aseguramos que no haya padding que afecte la altura */
-    position: relative; /* Necesario para posicionar los botones de forma absoluta */
+    padding: 0;
+    position: relative;
+    flex-direction: row; /* Aquí se asegura que los elementos estén en fila (horizontal) */
   }
   
   .panel-izquierdo h1 {
@@ -58,33 +55,46 @@
     animation: swing 1.5s infinite ease-in-out;
     cursor: pointer;
     transition: transform 0.2s;
+    margin-right: 20px;
   }
   .panel-izquierdo .loro:hover {
     transform: scale(1.1);
   }
-  .boton-iniciar,
-  .boton-pantalla-completa {
-    margin-top: 10px;
+  .boton-iniciar {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
     padding: 10px 20px;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    border: none;
-    border-radius: 25px;
-    background: linear-gradient(135deg, #4caf50, #2e7d32);
-    color: #ffffff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s, box-shadow 0.2s, background 0.3s ease;
-  }
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.boton-iniciar:hover {
+    background: linear-gradient(135deg, #0056b3, #007bff); /* Invertir gradiente en hover. */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño. */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover. */
+}
+
+.boton-iniciar:active {
+    transform: scale(0.95); /* Efecto de presionado. */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más pequeña al presionar. */
+}
+
+.boton-iniciar:focus {
+    outline: none; /* Quita el borde predeterminado del navegador. */
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.8); /* Destaca el botón al enfocarse. */
+}
   
-  .boton-iniciar:hover,
-  .boton-pantalla-completa:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(135deg, #4caf50, #56c275);
-  }
-  
+
   .boton-pantalla-completa {
     background: linear-gradient(135deg, #007bff, #0056b3);
+    position: fixed; /* Fijo en relación a la ventana del navegador. */
+    top: 90px; /* Separación desde el borde superior. */
+    right: 1000px; /* Separación desde el borde derecho. */
   }
   
   h2 {
@@ -110,9 +120,7 @@
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efecto de sombra */
   }
   
-  .boton-pantalla-completa:hover {
-    background: linear-gradient(135deg, #007bff, #339fff);
-  }
+  
   /* Bloques */
   .bloques {
     display: flex;
@@ -216,12 +224,12 @@
   
   .botones-contenedor {
     position: absolute;
-    top: 10px; /* Mueve los botones hacia la parte superior */
-    width: 100%; /* Asegura que ocupe todo el ancho */
+    top: 10px; 
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
-  }
+}
   
   /* Media Queries para pantallas grandes */
   @media (min-width: 1024px) {
@@ -235,7 +243,7 @@
     }
   
     .panel-izquierdo .loro {
-      width: 250px;
+      width: 200px;
     }
   
     .bloques {
@@ -344,10 +352,11 @@
   }
   .panel-izquierdo-segundo .boton-pantalla-completa {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 100;
+    right: 90px;
     background-color: #dcedc8; /* Verde pastel */
     transition: all 0.3s ease;
+   
   }
   
   .panel-izquierdo-segundo .boton-pantalla-completa:hover {
